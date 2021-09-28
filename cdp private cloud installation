@@ -1,0 +1,11 @@
+sudo dd if=/dev/zero of=/home/swapfile bs=8192 count=1048576
+chmod 600 /home/swapfile
+mkswap /home/swapfile
+swapon /home/swapfile
+echo 10 > /proc/sys/vm/swappiness
+
+wget https://archive.cloudera.com/cm7/7.4.4/cloudera-manager-installer.bin
+
+chmod u+x cloudera-manager-installer.bin
+
+sudo ./cloudera-manager-installer.bin
