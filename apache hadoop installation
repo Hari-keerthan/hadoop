@@ -16,6 +16,10 @@ export HIVE_HOME=/root/apache-hive-3.1.2-bin
 hdfs user not set - https://stackoverflow.com/questions/48129029/hdfs-namenode-user-hdfs-datanode-user-hdfs-secondarynamenode-user-not-defined
 
 mapred class path not set - https://stackoverflow.com/questions/52036482/yarn-could-not-find-or-load-main-class-org-apache-hadoop-mapreduce-v2-app-mrappm
+                         - set the following value for <name>yarn.application.classpath</name> in yarn-site.xml -
+                         -/root/hadoop-3.3.1/etc/hadoop:/root/hadoop-3.3.1/share/hadoop/common/lib/*:/root/hadoop-3.3.1/share/hadoop/common/*:/root/hadoop-3.3.1/share/hadoop/hdfs:/root/hadoop-3.3.1/share/hadoop/hdfs/lib/*:/root/hadoop-3.3.1/share/hadoop/hdfs/*:/root/hadoop-3.3.1/share/hadoop/mapreduce/*:/root/hadoop-3.3.1/share/hadoop/yarn:/root/hadoop-3.3.1/share/hadoop/yarn/lib/*:/root/hadoop-3.3.1/share/hadoop/yarn/*
+
+command to test mapreduce - hadoop jar /root/hadoop-3.3.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.1.jar grep /root/hadoop-3.3.1/etc/hadoop/*.xml ~/output 'principal[.]*'
 
 hive install - https://phoenixnap.com/kb/install-hive-on-ubuntu
 
