@@ -1,0 +1,37 @@
+issue - 
+hdfs yarn installation site - https://www.tecmint.com/install-hadoop-single-node-on-centos-7/ , https://www.vultr.com/docs/how-to-install-hadoop-in-stand-alone-mode-on-centos-7 , https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
+
+java class not set - add following lines at end of /etc/bashrc - 
+
+JAVA_HOME=/usr/lib/jvm/jre
+export HADOOP_PREFIX=/root/hadoop-3.3.1
+export PATH JAVA_HOME HADOOP_PREFIX
+export HADOOP_MAPRED_HOME=/root/hadoop-3.3.1
+export HADOOP_HOME=/root/hadoop-3.3.1
+export HADOOP_HDFS_HOME=$HADOOP_HOME
+export HADOOP_COMMON_HOME=$HADOOP_HOME
+export YARN_HOME=$HADOOP_PREFIX
+export HIVE_HOME=/root/apache-hive-3.1.2-bin
+
+hdfs user not set - https://stackoverflow.com/questions/48129029/hdfs-namenode-user-hdfs-datanode-user-hdfs-secondarynamenode-user-not-defined
+
+mapred class path not set - https://stackoverflow.com/questions/52036482/yarn-could-not-find-or-load-main-class-org-apache-hadoop-mapreduce-v2-app-mrappm
+
+hive install - https://phoenixnap.com/kb/install-hive-on-ubuntu
+
+hive issue illegal character - https://stackoverflow.com/questions/52783323/hive-throws-wstxparsingexception-illegal-character-entity-expansion-character
+
+init schema - https://stackoverflow.com/questions/42209875/hive-2-1-1-metaexceptionmessageversion-information-not-found-in-metastore
+https://stackoverflow.com/questions/68414746/what-ist-the-reason-for-the-error-message-error-function-nucleus-ascii-alrea
+superset  - 
+
+python-geohash error - https://stackoverflow.com/questions/39455741/gcc-error-trying-to-exec-cc1plus-execvp-no-such-file-or-directory
+
+ModuleNotFoundError: No module named 'dataclasses' - pip install dataclasses
+
+
+jdbc:hive2://192.168.1.43:10000/default
+
+https://stackoverflow.com/questions/58288054/superset-hive-connection-issue
+
+https://stackoverflow.com/questions/31173113/starting-hiveserver2
