@@ -1,0 +1,4 @@
+connect to hive and run a query - 
+
+beeline -u "jdbc:hive2://<zookeeper hostname>:2181/default;httpPath=cliservice;principal=hive/<realm principal>;retries=5;serviceDiscoveryMode=zooKeeper;ssl=true;transportMode=http;zooKeeperNamespace=hiveserver2" -e "set -v;" >> output
+beeline -u "jdbc:hive2://<zookeeper hostname>:2181/default;httpPath=cliservice;principal=hive/<realm principal>;retries=5;serviceDiscoveryMode=zooKeeper;ssl=true;transportMode=http;zooKeeperNamespace=hiveserver2" -e "show tables;" >> output
